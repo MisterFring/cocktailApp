@@ -22,8 +22,8 @@ export default new Vuex.Store({
     searchByName({commit, dispatch}, cocktailName){
       axios
         .get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + cocktailName)
-        .then(({data}) => {
-          commit('setResultSearch', data)
+        .then(({ data: { drinks } }) => {
+          commit('setResultSearch', drinks)
         })
       }
   },

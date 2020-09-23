@@ -1,7 +1,8 @@
 <template>
 	<div>
-		<label for="flavor">Favorite ice cream flavor?</label>
-		<input @input="changed" name="flavor">
+		<label for="flavor">Favorite ice cream flavor ? </label>
+		<input @input="changed" name="flavor"><br />
+        <label for="cocktailName">Your cocktail : </label>
         <input @input="test" name="cocktailName">
 	</div>
 </template>
