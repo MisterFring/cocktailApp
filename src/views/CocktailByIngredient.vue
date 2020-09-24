@@ -3,10 +3,10 @@
         <!-- <label for="alcoolName">Your alcohol : </label>
         <input @input="searchDrinks" name="alcoholName"> -->
         <p>Choose your alcohol</p>
-        <b-form-group v-for="(item,i) in arrayOfAlcohol" :key="arrayOfAlcohol[i]">
-            <b-form-radio @click="searchDrinks" :name="item" :value="item" v-model="testA"></b-form-radio>
+        <div v-for="(item,i) in arrayOfAlcohol" :key="arrayOfAlcohol[i]">
+            <input @click="searchDrinks" type="radio" :id="i" :name="item" :value="item" v-model="testA">
             <label :for="item">{{ item }}</label>
-        </b-form-group>
+        </div>
 
 
 
