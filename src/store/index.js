@@ -25,7 +25,14 @@ export default new Vuex.Store({
         .then(({ data: { drinks } }) => {
           commit('setResultSearch', drinks)
         })
-      }
+    },
+    searchByAlcohol({commit, dispatch}, alcoholName){
+      axios
+        .get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + alcoholName)
+        .then(({ data: { drinks } }) => {
+          commit('setResultSearch', drinks)
+        })
+    }
   },
   modules: {
   }

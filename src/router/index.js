@@ -19,15 +19,21 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/login',
-    name: 'login',
-    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
+    path: '/cocktailByName',
+    name: 'lcocktailByName',
+    component: () => import(/* webpackChunkName: "login" */ '../views/CocktailByName.vue')
+  },
+  {
+    path: '/cocktailByIngredient',
+    name: 'cocktailByIngredient',
+    component: () => import(/* webpackChunkName: "login" */ '../views/CocktailByIngredient.vue')
   },
   {
     path: '/todo',
     name: 'todo',
     component: () => import(/* webpackChunkName: "login" */ '../views/Todo.vue')
-  }
+  },
+  
 ]
 
 const router = new VueRouter({

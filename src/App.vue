@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <div id="nav">
-       <!-- Ligne a modif avec v-for -->
       <template v-for="(item, index) in items">
         <router-link :key="index" :to="item.path">
         {{item.title}}
@@ -27,7 +26,8 @@ export default {
         items: [
           { path: '/', title: 'Home'},
           { path: '/about', title: 'About'},
-          { path:'/login', title: 'Login'},
+          { path:'/cocktailByName', title: 'Cocktail By Name'},
+          { path:'/cocktailByIngredient', title: 'Cocktail By Ingredient'},
           { path: '/todo', title: 'Todo'}
         ]
       }
