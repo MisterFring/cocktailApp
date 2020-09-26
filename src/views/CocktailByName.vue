@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<FormLogin />
+		<!-- <FormLogin /> -->
 		<FormTest />
     	<DisplayTest />
 	</div>
@@ -8,15 +8,16 @@
 
 <script>
 
-import FormLogin from '@/components/FormLogin.vue'
+// import FormLogin from '@/components/FormLogin.vue'
 import FormTest from '@/components/FormTest'
 import DisplayTest from '@/components/DisplayTest'
 
+
 export default {
 	components: {
-		FormLogin,
+		// FormLogin,
 		FormTest,
-        DisplayTest
+		DisplayTest
 	}
 }
 

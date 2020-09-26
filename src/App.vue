@@ -4,7 +4,8 @@
       <template v-for="(item, index) in items">
         <router-link :key="index" :to="item.path">
         {{item.title}}
-        </router-link> |
+        <span v-if="index+1 != items.length"> |</span>
+        </router-link>
       </template>
       
       <!-- -->
@@ -36,7 +37,9 @@ export default {
 </script>
 
 
+
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -57,4 +60,8 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+#nav a.router-link-exact-active span{
+  color: #2c3e50;
+}
+
 </style>
